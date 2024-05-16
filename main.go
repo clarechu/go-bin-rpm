@@ -119,7 +119,7 @@ func generateSpec(c *cli.Context) error {
 
 func generatePkg(c *cli.Context) error {
 	var err error
-
+	fmt.Println("aaaaaaa ..........")
 	file := c.String("file")
 	arch := c.String("arch")
 	version := c.String("version")

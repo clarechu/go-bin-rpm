@@ -225,6 +225,7 @@ func (p *Package) WriteSpecFile(sourceDir string, buildAreaPath string) error {
 
 // RunBuild executes the build of buildAreaPath.
 func (p *Package) RunBuild(buildAreaPath string, output string) error {
+	fmt.Println("hello aaaaa")
 	path := filepath.Join(buildAreaPath, "SPECS", p.Name+".spec")
 	def := "_topdir " + buildAreaPath
 	arch := p.Arch
