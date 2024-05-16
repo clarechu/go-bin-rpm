@@ -234,6 +234,13 @@ func (p *Package) RunBuild(buildAreaPath string, output string) error {
 	if arch == "amd64" {
 		arch = "x86_64"
 	}
+	fmt.Printf("target :%s \n", arch)
+	open, _ := os.Open(path)
+	all, _ := io.ReadAll(open)
+	fmt.Printf("path spec :%s \n", string(all))
+	fmt.Printf("path spec :%s \n", string(all))
+	fmt.Printf("define spec :%s \n", def)
+
 	args := []string{"--target", arch, "-bb", path, "--define", def}
 	logger.Printf("%s %s\n", "rpmbuild", args)
 	oCmd := exec.Command("rpmbuild", args...)
